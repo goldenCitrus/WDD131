@@ -1,0 +1,50 @@
+hr {
+    color: #005498;
+    max-width: 450px;
+}
+
+h1 + p {
+    color: #005498;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    width: 350px;
+    margin:0 auto;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+img {
+    max-width: 340px;
+    display: block;
+    margin: 0 auto;
+}
+
+body {
+    align-content: center;
+    background: #dddddd;
+    border: 2px solid #c2c2c2;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#content {
+    padding: 25px 0px 50px;
+}

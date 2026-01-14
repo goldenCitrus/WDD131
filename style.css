@@ -11,3 +11,47 @@ header {
 nav {
     position: sticky;
 }
+
+.innerNav {
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.innerNav a {
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+}
+#home {
+    background-color: lightgrey;
+}
+
+.ddMenu:first-child {
+    padding: 10px;
+    display: none;
+    list-style: none;
+}
+
+.dd {
+    margin: 5px;
+    display: flex;
+    padding: 10px;
+    border: solid 2px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: lightgrey;
+}
+
+.dd:hover .ddMenu{
+    display: flex;
+    flex-direction: column;
+    /* background-color: lightslategray; */
+}
+
+.dd:hover, #home:hover {
+    background-color: lightslategray;
+}

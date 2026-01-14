@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-    
+    <script src="main.js" defer></script>
+
     <meta charset="UTF-8">
     <meta name="description" content="The home page of my WDD131 portfolio">
     <meta name="author" content="Curtis Schmidtlein">
@@ -12,10 +13,23 @@
     <header>
         <h1>Curtis: WDD131 Portfolio</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="week-1/ponder/week-1-ponder.html">Week 1 Ponder</a>
-            <a href="week-1/prove/mission/index.html">Week 1 Prove</a>
-            <!-- <a href="#">TBA</a> -->
+            <ul class="innerNav">
+                <li><a href="index.html" id="home">Home</a></li>
+                <li class="dd">Ponders ▾
+                    <ul class="ddMenu">
+                        <li><a href="week-1/ponder/week-1-ponder.html">Week 1</a></li>
+                        <li><a href="week-2/ponder/week-2-ponder.html">Week 2</a></li>
+                    </ul>
+                </li>
+                <li class="dd">Proves ▾
+                    <ul class="ddMenu">
+                        <li><a href="week-1/prove/mission/index.html">Week 1</a></li>
+                        <!-- <li><a href="week-2">Week 2</a></li> -->
+                    </ul>
+                </li>
+            </ul>
+            
+            <!-- <a href="week-1/prove/mission/index.html">Week 1 Prove</a> -->
         </nav>
     </header>
 

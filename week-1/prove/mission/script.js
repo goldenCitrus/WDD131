@@ -17,6 +17,9 @@ function changeTheme() {
             if (texts[i].textContent !== 'BRIGHAM YOUNG UNIVERSITY-IDAHO') {
                 texts[i].style.color = 'white';
             }
+            else {
+                texts[i].style.color = '#9fbfcf';
+            }
         logo.src = 'https://wddbyui.github.io/wdd131/images/byui-logo-white.png'
         }
     } else if (current === 'light') {
@@ -25,6 +28,9 @@ function changeTheme() {
         for (let i = 0; i < texts.length; i++) {
             if (texts[i].textContent !== 'BRIGHAM YOUNG UNIVERSITY-IDAHO') {
                 texts[i].style.color = 'black';
+            }
+            else {
+                texts[i].style.color = '#1476ba';
             }
         logo.src = 'https://wddbyui.github.io/wdd131/images/byui-logo-blue.webp'
         }

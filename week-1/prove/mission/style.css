@@ -4,9 +4,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #c2c2c2;
+    border: 1px solid #c2c2c2;
     max-width: 650px;
     margin: 0 auto;
+    /* background-color: green; */
 }
 
 
@@ -65,4 +66,9 @@ ol {
 }
 /* p:not(h1 + p), li {
     font-size: 12px;
+} */
+
+/* select {
+    display: block;
+    align-items: left;
 } */

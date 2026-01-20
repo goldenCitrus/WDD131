@@ -17,12 +17,21 @@ h1 {
     text-align: center;
 }
 section {
-    max-width: 400px;
+    max-width: 426px;
     padding: 20px;
     background-color: white;
     margin: 1em;
     border: 1px solid #ccc;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px slategray;
+    background-color: #f0f0f0;
+}
+/* section:hover h2, section:hover p {
+    color: white;
+} */
 nav a {
     padding: 20px;
     color: black;
@@ -51,6 +60,17 @@ footer {
 @media screen and (min-width: 700px) {
     main {
         display: flex;
+        /* justify-content: center; */
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (min-width: px) {
+    main {
+        display: flex;
+        /* justify-content: center; */
         flex-direction: row;
         flex-wrap: wrap;
     }

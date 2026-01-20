@@ -30,7 +30,7 @@ nav {
     background-color: lightgrey;
 }
 
-.ddMenu:first-child {
+.ddMenu {
     padding: 10px;
     display: none;
     list-style: none;

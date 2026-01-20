@@ -4,9 +4,7 @@
 body {
   font-family: Roboto, sans-serif;
 }
-header,
-main,
-footer {
+header,main,footer {
   max-width: 1000px;
   margin: 1rem auto;
   border: 1px solid #ccc;
@@ -26,11 +24,15 @@ section {
 }
 section:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 16px slategray;
+    box-shadow: 0 8px 16px rgb(77, 77, 77);
     background-color: #f0f0f0;
 }
 /* section:hover h2, section:hover p {
     color: white;
+} */
+/* nav {
+  display: block;
+  flex-direction: column;
 } */
 nav a {
     padding: 20px;
@@ -45,17 +47,39 @@ nav a:hover {
     cursor: pointer;
     border: none;
     background-color: transparent;
+    border-radius: 5px;
+    transition: background-color 0.25s ease;
+}
+.menu-btn:hover {
+    /* background-color: #9fc2ce; */
+
+    .bar1, .bar2, .bar3 {
+        /* box-shadow: 0px 2px 2px rgb(116, 116, 116); */
+        width: 30px;
+        margin: 5px 0px;
+        height: 4px;
+    }
 }
 .bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 4px;
+    width: 25px;
+    height: 3px;
     background-color: black;
-    margin: 5px 0;
+    margin: 3px 0px;
+    transition: box-shadow 0.2s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease;
 }
 footer {
     text-align: center;
 }
 
+@media screen and (min-width: 551px) {
+    main {
+        justify-content: center;
+    }
+    section {
+        padding: 15px;
+        max-width: 800px;
+    }
+}
 
 @media screen and (min-width: 700px) {
     main {
@@ -64,15 +88,43 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
 }
 
-@media screen and (min-width: px) {
+@media screen and (min-width: 1050px) {
+    section {
+        max-width: 426px;
+        padding: 20px;
+    }
     main {
         display: flex;
-        /* justify-content: center; */
+        justify-content: left;
         flex-direction: row;
         flex-wrap: wrap;
     }
+    .menu-btn {
+        display: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+    nav a{
+        display: flex !important;
+    }
+}
 
+@media screen and (min-width: 1520px) {
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    header,main,footer {
+        max-width: 1510px;
+    }
+    section {
+    max-width: 426px;
+    }
 }

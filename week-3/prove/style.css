@@ -11,12 +11,13 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    line-height: 0px;
 }
 
 img {
     justify-self: center;
     box-shadow: 5px 5px 10px #565656;
-    max-width: fit-content;
+    max-width: 250px;
     margin: 10px;
     border: 10px solid white;
     transition: transform 0.05s ease, box-shadow 0.05s ease;
@@ -29,6 +30,7 @@ img:hover {
 }
 
 div {
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

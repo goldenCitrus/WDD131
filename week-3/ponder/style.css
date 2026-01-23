@@ -68,7 +68,7 @@ nav a:hover {
     transition: box-shadow 0.2s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease;
 }
 footer {
-    text-align: center;
+    text-align: left;
 }
 
 @media screen and (min-width: 551px) {

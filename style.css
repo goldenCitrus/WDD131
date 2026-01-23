@@ -5,18 +5,38 @@ header,main,footer {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* color: white; */
     max-width: 1000px;
-    margin: 1rem auto;
+    width: 100%;
+    /* margin: 0px; */
     /* border: 1px solid #ccc; */
     padding: 1rem;
     background-color: #489FB5;
 }
-/* Body {
+
+main {
+    background-color: #FFA62B;
+
+}
+
+header {
+    border-radius: 25px 25px 0px 0px;
+}
+
+footer {
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    align-content: center;
+    /* position: fixed; */
+    /* bottom: 0; */
+    text-align: center;
+}
+
+Body {
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: center;
 }
-header { 
+/* header { 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #434A42;
     max-width: 1000px;
@@ -77,10 +97,10 @@ header {
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.4s ease, opacity 0.3s ease;
-    display: block; /* important: display must NOT be none */
+    display: block;
 }
 
 #navMenu.open {
-    max-height: 500px; /* big enough to fit your menu */
+    max-height: 450px;
     opacity: 1;
 }

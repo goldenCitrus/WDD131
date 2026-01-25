@@ -1,9 +1,12 @@
 header, footer {
     background-color: #317de0;
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -15,18 +18,18 @@ main {
 }
 
 img {
-    justify-self: center;
-    box-shadow: 5px 5px 10px #565656;
-    max-width: 250px;
-    margin: 10px;
-    border: 10px solid white;
-    transition: transform 0.05s ease, box-shadow 0.05s ease;
+    height: 250px;
 }
 
-img:hover {
+.imagebox:hover {
     transform:translateY(-5px);
     box-shadow: 5.5px 10.5px 20.5px rgb(42, 42, 42);
     cursor: pointer;
+}
+
+#secretimagebox {
+    transition: opacity 0.3s ease;
+    opacity: 1;
 }
 
 div {
@@ -35,4 +38,100 @@ div {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1000px;
+}
+
+.imagebox {
+    justify-self: center;
+    box-shadow: 5px 5px 10px #565656;
+    margin: 15px 30px;
+    border: 10px solid white;
+    transition: transform 0.05s ease, box-shadow 0.05s ease;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    margin: 20px 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+main:first-of-type h2 {
+    padding: 10px;
+    font-size: 30px;
+}
+
+h1 {
+    color: white;
+}
+
+footer:first-of-type p {
+    color: white;
+}
+
+nav a {
+    display: block;
+    align-self: center;
+    color: white;
+    font-size: 20px;
+    margin: 25px;
+}
+
+
+.navDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navDiv h2 {
+    color: white;
+    margin: 0px;
+    display: none;
+    transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.navDiv h2:hover {
+    color: black;
+    transform: scale(110%);
+    text-shadow: 1px 1px 2px white;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: rgb(56, 56, 56);
+}
+
+#theNav {
+    display: none;
+}
+#theNav.nav-open {
+    display: block;
+}
+
+#menuButton {
+    display: block;
+}
+
+
+@media screen and (min-width: 1005px) {
+    #menuButton {
+        display: none;
+    }
+    .imagebox {
+        margin: 20px 30px !important;
+    }
+    #theNav {
+        display: flex;
+    }
+    nav a {
+        display: inline-block !important;
+    }
+}
+
+@media screen and (min-width: 815px) {
+    .imagebox {
+        margin: 20px 65px;
+    }
+    nav a {
+        display: block;
+        align-self: center;
+    }
 }

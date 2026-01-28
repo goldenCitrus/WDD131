@@ -5,6 +5,7 @@ hamMenu.addEventListener('click', navMenu);
 
 function navMenu() {
     console.log('got it')
+    hamMenu.classList.toggle('click')
     // document.getElementById('boing').stop();
     document.getElementById('boing').play();
     for (let i = 0; i < navLinks.length; i++) {
@@ -16,4 +17,3 @@ function navMenu() {
         }
     }
 }
-

@@ -11,7 +11,7 @@ function openModal(e) {
     modalImage.src = e.target.src;
     switch (e.target.tagName) {
         case 'IMG':
-            modalImage.src = e.target.src.slice(0, -6) + 'full.jpg';
+            modalImage.src = e.target.src.replace('sm', 'full');
             modal.showModal();
             break;
         default:

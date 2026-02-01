@@ -1,18 +1,23 @@
 let secretImage = document.getElementById('secretImg');
 let menuButton = document.getElementById('menuButton');
+let modal = document.getElementById('modal');
+let modalImg = modal.querySelector('IMG');
+const anImage = document.getElementById('imgContainer');
 
 secretImage.addEventListener('mouseover', imgSwap);
-secretImage.addEventListener('mouseleave', imgSwap)
+secretImage.addEventListener('mouseleave', imgSwap);
+modal.addEventListener('click', closeModal)
 
-menuButton.addEventListener('click', openclose)
+menuButton.addEventListener('click', openclose);
+anImage.addEventListener('click', blowUp);
 
 function imgSwap() {
-    console.log('working')
-    if (secretImage.src == "https://wddbyui.github.io/wdd131/images/norris-sm.jpg") {
-        secretImage.src = 'Punkin.png';
+    if (secretImage.src == 'norris-sm.jpg') {
+        console.log('working')
+        secretImage.src = 'Punkin.jpg';
     }
     else {
-        secretImage.src = "https://wddbyui.github.io/wdd131/images/norris-sm.jpg"
+        secretImage.src = 'norris-sm.jpg';
     }
 }
 
@@ -26,5 +31,18 @@ function openclose() {
     else {
         isOpen = true;
         document.getElementById('theNav').classList.toggle('nav-open');
+    }
+}
+
+function blowUp(mouse) {
+    if (mouse.target.tagName == 'IMG') {
+        modalImg.src = mouse.target.src;
+        modal.showModal();
+    }
+}
+
+function closeModal(mouse) {
+    if (mouse.target.tagName != "IMG") {
+        modal.close()
     }
 }

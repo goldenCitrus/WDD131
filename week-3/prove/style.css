@@ -109,7 +109,7 @@ nav a:hover {
 
 dialog img {
     position: absolute;
-    top: 15%;
+    top: 15vh;
     left: 25%;
     width: 50%;
     height: auto;
@@ -126,7 +126,7 @@ dialog {
     background-color: grey;
     text-shadow: 1px 1px 5px white;
     position: absolute;
-    top: 14%;
+    top: 14vh;
     left: 75%;
     padding: 3px 6px;
     font-size: 1.5em;

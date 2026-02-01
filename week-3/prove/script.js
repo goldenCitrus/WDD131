@@ -12,7 +12,7 @@ menuButton.addEventListener('click', openclose);
 anImage.addEventListener('click', blowUp);
 
 function imgSwap() {
-    if (secretImage.src == 'norris-sm.jpg') {
+    if (secretImage.src.endsWith('norris-sm.jpg')) {
         console.log('working')
         secretImage.src = 'Punkin.jpg';
     }
@@ -36,8 +36,9 @@ function openclose() {
 
 function blowUp(mouse) {
     if (mouse.target.tagName == 'IMG') {
-        modalImg.src = mouse.target.src;
+        modalImg.src = mouse.target.src.replace('sm', 'full');
         modal.showModal();
+
     }
 }
 

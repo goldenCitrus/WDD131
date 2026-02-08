@@ -71,7 +71,7 @@ h2 {
     display: none;
     background-color: #f4dac0;
     width: 3px;
-    margin: 50px;
+    margin: 50px 30px;
 }
 .bookMain {
     display: grid;
@@ -102,6 +102,9 @@ footer {
         max-width: 75%;
         display: flex;
         flex-direction: row;
+    }
+    #title {
+        font-size: 27px;
     }
     #bar1 {
         display: none;

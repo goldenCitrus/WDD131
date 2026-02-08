@@ -1,0 +1,119 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+#navBar {
+    border-style: solid none solid none;
+    border-width: 2px;
+    border-color: #f4dac0;
+    display: flex;
+    align-content: right;
+    justify-content: end;
+}
+ul {
+    list-style: none;
+    padding-right: 20px;
+}
+li {
+    display: inline-block;
+    padding: 10px 30px;
+}
+a {
+    color: #bb3f5a;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+a:hover {
+    color: #c9657b;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.book {
+    max-width: 750px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+h2 {
+    color: hsl(347, 77%, 39%);
+}
+.bookInfo {
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: 30px 30px 30px 30px;
+    gap: 10px;
+    padding: 10px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#releaseDate {
+    grid-area: 1;
+}
+#idkWhatTheseNumbersMean {
+    grid-area: 2;
+}
+#bar1 {
+    background-color: #f4dac0;
+    width: 100%;
+    height: 2px;
+    margin-top: 70px;
+}
+#bar2 {
+    display: none;
+    background-color: #f4dac0;
+    width: 3px;
+    margin: 50px;
+}
+.bookMain {
+    display: grid;
+    grid-template-columns: auto 90px;
+    grid-template-rows: auto auto auto;
+}
+#title {
+    grid-area: 1/1;
+    font-size: 44px;
+}
+#cover {
+    grid-area: 2/1;
+    justify-self: center;
+}
+#desc {
+    grid-area: 3/1;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer {
+    border-top: 2px solid #f4dac0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 900px) {
+    .book {
+        max-width: 75%;
+        display: flex;
+        flex-direction: row;
+    }
+    #bar1 {
+        display: none;
+    }
+    #bar2 {
+        display: inline-block;
+    }
+    .bookInfo {
+        grid-template-columns: 100px;
+        margin-top: 50px;
+    }
+    .bookMain {
+        margin: 30px 0px 50px 0px;
+    }
+}

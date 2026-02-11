@@ -28,7 +28,7 @@ footer {
     background-color: var(--base-color);
 }
 h1 {
-    color: green;
+    color: white;
 }
 #button1 {
     font-size: 30px;
@@ -46,6 +46,6 @@ h1 {
 #button1.click {
     box-shadow: 0px 1px 2px black, inset 1px 1px 2px white;
 }
-#mystery select{
-
+footer p {
+    color: white;
 }

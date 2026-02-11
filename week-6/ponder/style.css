@@ -33,11 +33,14 @@ h1 {
 #button1 {
     font-size: 30px;
     border: 2px solid hsl(266, 39%, 80%);;
-    color:hsl(266, 45%, 40%);
+    color:black;
+    /* -webkit-text-stroke: .5px black; */
     padding: 30px;
     border-radius: 100px;
     background-color: var(--button-color);
     transition: all 30ms ease-in-out;
+    /* color: white; */
+    text-shadow: -.5px -.5px 0 white, .5px -.5px 0 white, -.5px  .5px 0 white, .5px  .5px 0 white;
 }
 #button1:hover {
     transform: translateY(-4px);

@@ -10,7 +10,7 @@ let magicIndex = 0;
 let gradeText = `= ${students[magicIndex].points}`;
 let isThereAnInput = false;
 
-const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape', 'zombo'];
+const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 for (let i = 0; i < words.length; i++)
 {
     console.log(words[i]);
@@ -25,6 +25,8 @@ function clickEffect() {
 }
 
 function activate() {
+    words.push('zombo');
+    console.log('shhhh... 🤫');
     button1.style.display = 'none';
     let section = document.createElement('section');
     section.id = 'mysteriousSection';
@@ -82,12 +84,20 @@ function givePurpose(e) {
         // section.appendChild(input, label);
         submitButton.addEventListener('click', function() {
             convert(input.value.toUpperCase(), students[magicIndex]);
+            if (magicIndex >= 10)
+            {
+                console.log('ZOMBO');
+            }
             input.value = '';
         });
         input.addEventListener('keydown', function(e) {
             if (e.key === 'Enter')
             {
                 convert(input.value.toUpperCase(), students[magicIndex]);
+                if (students[magicIndex].points >= 10)
+                {
+                    console.log('ZOMBO');
+                }
                 input.value = '';
             }
         });
@@ -124,7 +134,7 @@ function convert(grade, student) {
             student.points += -1;
             break;
         case 'ZOMBO':
-            window.open("https://www.zombo.com");
+            window.open("https://web.archive.org/web/20210731103454/https://zombo.com/");
             break;
         case 'WATERMELON':
             window.open("https://www.watermelon.com/");

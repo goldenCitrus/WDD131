@@ -72,14 +72,15 @@ function givePurpose(e) {
         input.placeholder = 'Enter a letter A-F';
         input.style.display = 'block';
         
-        let label = document.createElement('label');
-        label.textContent = "Input a letter between A and F"
-        label.setAttribute('for', 'mysteriousInput');
+        // let label = document.createElement('label');
+        // label.textContent = "Input a letter between A and F"
+        // label.setAttribute('for', 'mysteriousInput');
         
         let submitButton = document.createElement('button');
         submitButton.textContent = 'Submit';
         submitButton.id = 'submit';
         submitButton.style.display = 'inline-block';
+        // submitButton.ariaLabel = 'Submit button';
 
         // section.appendChild(input, label);
         submitButton.addEventListener('click', function() {

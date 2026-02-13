@@ -1,0 +1,54 @@
+:root {
+    --base-color: hsl(162, 80%, 10%);
+    --light-color: hsl(162, 40%, 80%);
+    --button-color: hsl(162, 50%, 45%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header,main,footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+header {
+    background-color: var(--base-color);
+}
+main {
+    background-color: var(--light-color);
+    height: 70vh;
+}
+footer {
+    background-color: var(--base-color);
+}
+h1 {
+    color: white;
+}
+#button1 {
+    font-size: 30px;
+    border: 2px solid hsl(266, 39%, 80%);;
+    color:black;
+    /* -webkit-text-stroke: .5px black; */
+    padding: 30px;
+    border-radius: 100px;
+    background-color: var(--button-color);
+    transition: all 30ms ease-in-out;
+    /* color: white; */
+    text-shadow: -.5px -.5px 0 white, .5px -.5px 0 white, -.5px  .5px 0 white, .5px  .5px 0 white;
+}
+#button1:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 1px 2px black;
+}
+#button1.click {
+    box-shadow: 0px 1px 2px black, inset 1px 1px 2px white;
+}
+footer p {
+    color: white;
+}

@@ -58,5 +58,5 @@ const movies = [
             <p id="rating"><span aria-label="Rating: ${movie.stars.length} out of 5 stars">${movie.stars}</span></p>
             <p id="desc">${movie.description}</p>
         `;
-        document.body.appendChild(article);
+        document.getElementById("main-content").appendChild(article);
     });

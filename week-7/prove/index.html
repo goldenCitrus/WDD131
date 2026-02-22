@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="fav.ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>credit card :P</h1>
+    </header>
+    <main>
+        <form id="cardForm" action="completed.html" method="get">
+            <section id="cardDiv">
+                <div id="cardFront">
+                    <p>Total: $199</p>
+                    <img src="visa-logo.png" alt="front and back of a credit card">
+
+                    <input type="text" id="cardNumber" placeholder="1234567890123456" required pattern="^\d{16}$">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardHolder" placeholder="John Doe" required>
+                    <label for="cardHolder">Card Holder:</label>
+                    <div id="cardExpiration">
+                        <label for="expirationDate">Expiration:</label>
+                        <input type='text' id='month' name="expMonth" placeholder="MM" required pattern="^(1[0-2])|(0[1-9])$" ria-labelledby="expirationDate">
+                        <input type='text' id='year' name="expYear" placeholder="YY" required pattern="^\d{2}$" aria-labelledby="expirationDate">
+                    </div>
+                </div>
+                <div id="cardBack">
+                    <section id="backBar"></section>
+                    <input type="text" id="cvc" placeholder="xxx" required pattern="^\d{3}$">
+                    <label for="cvc">CVC/CVV:</label>
+                </div>
+                <button type="submit" id="submitBtn">Submit</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        &copy; shmeep shmop
+    </footer>
+</body>
+</html>

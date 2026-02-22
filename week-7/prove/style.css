@@ -1,0 +1,167 @@
+* {
+    cursor: url('cursor.png'), auto;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #023436;
+}
+header, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 10vh;
+    /* padding: 1rem; */
+}
+header {
+    background-image: linear-gradient(180deg, #023436 0%, #0b7a75 100%);
+}
+footer {
+    background-image: linear-gradient(180deg, #0b7a75 0%, #023436 100%);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 50px; */
+    width: 50vw;
+    background-image: linear-gradient(255deg, #19535f 0%, #0b7a75 100%);
+}
+
+#cardDiv {
+    display: grid;
+    grid-template-columns: 100px 300px 100px;
+    grid-template-rows: 50px 180px 50px 50px;
+    padding: 50px
+}
+#submitBtn {
+    grid-area: 4/3/4/4;
+    font-size: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d7c9aa;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+    cursor: pointer;
+    margin: 5px;
+    z-index: 3;
+    transition: box-shadow 0.05s ease-in-out, transform 0.05s ease-in-out;
+}
+#submitBtn:hover {
+    /* background-color: #c0b09a; */
+    box-shadow: 4px 4px 5px black;
+    transform: translateY(-1px) translateX(-1px);
+}
+#submitBtn:active {
+    /* background-color: #c0b09a; */
+    /* box-shadow: ; */
+    transform: translateY(.5px) translateX(.5px);
+    box-shadow: inset -2px -2px 5px black, 2px 2px 5px black;
+}
+#cardFront {
+    padding: 15px;
+    grid-area: 1 / 1 / 3 / 3;
+    display: grid;
+    grid-template-columns: 235px 124px;
+    grid-template-rows: 55px 55px 55px ;
+    /* grid-auto-rows: 0;
+    grid-auto-columns: 0; */
+    gap: 10px;
+    background-color: #d7c9aa;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+    width: 370px;
+    height: 200px;
+    z-index: 2;
+}
+#cardFront p {
+    justify-self: self-start;
+    /* align-self: center; */
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #023436;
+
+}
+#cardFront img {
+    margin-top: -10px;
+    max-width: 100%;
+    max-height: 35%;
+    justify-self: self-end;
+    align-self: center;
+}
+#cardNumber {
+    grid-area: 2 / 1;
+    max-width: 85%;
+    max-height: 40%;
+    align-self: self-end;
+}
+#cardNumber + label{
+    grid-area: 2 / 1;
+
+}
+#cardHolder{
+    grid-area: 3 / 1;
+    max-width: 85%;
+    max-height: 40%;
+    align-self: self-end;
+}
+#cardHolder + label {
+    grid-area: 3 / 1;
+}
+#cardExpiration {
+    grid-area: 3 / 2;
+    max-width: 100%;
+}
+#month, #year {
+    margin-top: 6px;
+    width: 35%;
+    display: inline;
+}
+#cardBack {
+    grid-area: 2 / 2;
+    display: grid;
+    grid-template-columns: 300px 100px;
+    grid-template-rows: 90px 50px 90px;
+    background-color: #d7c9aa;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+    width: 400px;
+    height: 230px;
+    z-index: 1;
+}
+#cvc + label {
+    grid-area: 3 / 2;
+    justify-self: center;
+}
+#cvc {
+    grid-area: 3 / 2;
+    max-width: 70%;
+    height: 35%;
+    justify-self: center;
+    align-self: center;
+}
+label {
+    font-size: 17px;
+    color: #023436;
+}
+input {
+    background-color: #f0f3f5;
+    border-radius: 15px;
+    border: .5px inset grey;
+    padding: 5px;
+}
+#backBar {
+    background-color: rgb(53, 46, 37);
+    grid-area: 1 / 2;
+    margin-top: 13px;
+    height: 37px;
+}

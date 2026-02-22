@@ -37,6 +37,7 @@ function openclose() {
 function blowUp(mouse) {
     if (mouse.target.tagName == 'IMG') {
         modalImg.src = mouse.target.src.replace('sm', 'full');
+        modal.style.display = 'flex';
         modal.showModal();
 
     }
@@ -44,6 +45,7 @@ function blowUp(mouse) {
 
 function closeModal(mouse) {
     if (mouse.target.tagName != "IMG") {
+        modal.style.display = 'none';
         modal.close()
     }
 }

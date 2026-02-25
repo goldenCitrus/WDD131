@@ -172,8 +172,4 @@ function convert(grade, student) {
     //         document.getElementById("mysteriousText").textContent = gradeText;
     //     });
     // }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 30b187675353c62c1a474072c7fd84ca89a45977

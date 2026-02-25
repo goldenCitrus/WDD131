@@ -49,14 +49,13 @@ const movies = [
         articleId++;
         article.classList.add('movie');
         article.innerHTML = `
-            <h2 id="title">${movie.title}</h2>
+            <h2 class="title">${movie.title}</h2>
             <img src="${movie.imgSrc}" alt="${movie.imgAlt}">
-            <p id="date"><strong>Release Date:</strong> ${movie.date}</p>
-            <p id="desc">${movie.description}</p>
-            <p id="ages"><strong>Ages:</strong> ${movie.ages}</p>
-            <p id="genre"><strong>Genre:</strong> ${movie.genre}</p>
-            <p id="rating"><span aria-label="Rating: ${movie.stars.length} out of 5 stars">${movie.stars}</span></p>
-            <p id="desc">${movie.description}</p>
+            <p class="date"><strong>Release Date:</strong> ${movie.date}</p>
+            <p class="desc">${movie.description}</p>
+            <p class="ages"><strong>Ages:</strong> ${movie.ages}</p>
+            <p class="genre"><strong>Genre:</strong> ${movie.genre}</p>
+            <p class="rating"><span aria-label="Rating: ${movie.stars.length} out of 5 stars">${movie.stars}</span></p>
         `;
         document.getElementById("main-content").appendChild(article);
     });

@@ -20,3 +20,18 @@ body {
     background-color: #faf2d5;
     box-shadow: 1px 1px 6px black;
 }
+
+#card img {
+    width: 400px;
+    align-self: flex-start;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 2px solid black;
+}
+
+#card {
+    background: #313131;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    width: 400px; 
+    margin: 100px auto;
+}

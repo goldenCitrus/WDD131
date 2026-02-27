@@ -70,11 +70,11 @@ document.querySelector("#enrollStudent").addEventListener("click", function () {
 setInterval(autoenroll, Math.floor(Math.random() * 4000) + 1000);
 
 function autoenroll() {
-  aCourse.enrollStudent(Math.floor(Math.random() * aCourse.sections.length));
+  aCourse.enrollStudent(Math.floor(Math.random() * aCourse.sections.length + 1));
 }
 
 setInterval(autoderoll, Math.floor(Math.random() * 9000) + 1000);
 
 function autoderoll() {
-  aCourse.deenrollStudent(Math.floor(Math.random() * aCourse.sections.length));
+  aCourse.deenrollStudent(Math.floor(Math.random() * aCourse.sections.length + 1));
 }

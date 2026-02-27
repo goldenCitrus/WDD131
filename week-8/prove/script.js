@@ -9,6 +9,8 @@ const imgGenButton = document.getElementById('generate');
 const cardImg = document.getElementById('cardImg');
 const imgGenDiv = document.getElementById('imgGen');
 const imgGenInput = document.getElementById('prompt');
+const cardDiv = document.getElementById('card');
+const cardName = document.getElementById('cardName');
 
 function imageGen() {
     const randomIndex = Math.floor(Math.random() * possibleImages.length);
@@ -18,6 +20,8 @@ function imageGen() {
     imgGenDiv.style.display = 'none';
     cardImg.src = chosenImg.src;
     cardImg.alt = chosenImg.alt;
+    cardDiv.style.display = 'flex';
+    cardName.textContent = chosenImg.title;
 }
 
 imgGenButton.addEventListener('click', imageGen);

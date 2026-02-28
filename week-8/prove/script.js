@@ -1,8 +1,8 @@
 const possibleImages = [
-    {src: 'Driving-Pumpkin.jpg', alt: 'A kindhearted pumpkin, sitting behind the wheel of a car', title: 'Driving Pumpkin'},
-    {src: 'Evil-Burger-From-Hell-Eating-A-Kind-Kitten.jpg', alt: 'An sininster looking sentient burger, surrounded by flames, mouth agape, ready to eat a cute cat', title: 'Evil Burger From Hell '},
-    {src: 'Strong-Willed-Wolf.jpg', alt: 'A dashing werewolf, sitting against a tree, looking off into the distance', title: 'Strong Willed Werewolf'},
-    {src: 'Phelps.png', alt: 'Michael Phelps, the most decorated Olympian of all time', title: 'Michael Phelps'},
+    {src: 'Driving-Pumpkin.jpg', alt: 'A kindhearted pumpkin, sitting behind the wheel of a car', title: 'Driving Pumpkin', class: 'Friendly guy!'},
+    {src: 'Evil-Burger-From-Hell-Eating-A-Kind-Kitten.jpg', alt: 'An sininster looking sentient burger, surrounded by flames, mouth agape, ready to eat a cute cat', title: 'Evil Burger From Hell', class: 'Super Crazy Evil (like, the worst)'},
+    {src: 'Strong-Willed-Wolf.jpg', alt: 'A dashing werewolf, sitting against a tree, looking off into the distance', title: 'Strong Willed Werewolf', class: 'Lowkey-Lycan'},
+    {src: 'Phelps.png', alt: 'Michael Phelps, the most decorated Olympian of all time', title: 'Michael Phelps', class: 'Olympian (the sport, not the gods)'},
 ]
 const imgGenButton = document.getElementById('generate');
 
@@ -11,6 +11,16 @@ const imgGenDiv = document.getElementById('imgGen');
 const imgGenInput = document.getElementById('prompt');
 const cardDiv = document.getElementById('card');
 const cardName = document.getElementById('cardName');
+const cardClass = document.getElementById('class');
+let cardLevel = document.getElementById('level');
+let cardHp = document.getElementById('hp');
+const attacked = document.getElementById('attacked');
+const levelUp = document.getElementById('levelUp');
+const hit = document.getElementById('hit');
+const defeated = document.getElementById('defeated');
+
+let levelInt = 1;
+let hpInt = 100;
 
 function imageGen() {
     const randomIndex = Math.floor(Math.random() * possibleImages.length);
@@ -22,6 +32,9 @@ function imageGen() {
     cardImg.alt = chosenImg.alt;
     cardDiv.style.display = 'flex';
     cardName.textContent = chosenImg.title;
+    cardClass.textContent = `Class: ${chosenImg.class}`;
+    cardLevel.textContent = `Level: ${levelInt}`;
+    cardHp.textContent = `HP: ${hpInt}`;
 }
 
 imgGenButton.addEventListener('click', imageGen);
@@ -30,4 +43,40 @@ imgGenInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         imageGen();
     }
+});
+
+attacked.addEventListener('click', function() {
+    if (hpInt > 0) 
+    {
+        hit.play();
+        hpInt -= 10;
+        cardHp.textContent = `HP: ${hpInt}`;
+        cardDiv.classList.toggle('damaged');
+        setTimeout(() => {
+            cardDiv.classList.toggle('damaged');
+        }, 100);
+    }
+    if (hpInt <= 0)
+    {
+        defeated.play();
+        hpInt = 0;
+        cardHp.textContent = `HP: ${hpInt}`;
+        alert(`${cardName.textContent} has been defeated!`);
+        cardDiv.classList.toggle('defeated');
+        setTimeout(() => {
+            document.location.reload();
+        }, 600);
+    }
+
+});
+
+levelUp.addEventListener('click', function() {
+    levelInt += 1;
+    hpInt += 20;
+    cardLevel.textContent = `Level: ${levelInt}`;
+    cardHp.textContent = `HP: ${hpInt}`;
+    cardDiv.classList.toggle('leveledUp');
+    setTimeout(() => {
+        cardDiv.classList.toggle('leveledUp');
+    }, 300);
 });

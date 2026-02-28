@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+    <audio src="hit.mp3" id="hit"></audio>
+    <audio src="defeated.mp3" id="defeated"></audio>
     <div id="imgGen">
         <label for="prompt">Image Prompt:</label>
         <input type="text" id="prompt" placeholder="Generate your card!">
@@ -15,11 +17,16 @@
     </div>
     <div id="card">
         <img id="cardImg">
-        <section id="restOfCard">
             <h2 id="cardName"></h2>
-            <button id="attacked">Attacked</button>
-            <button id="levelUp">Level Up</button>
-        </section>
+            <section id="stats">
+                <p id="class"></p>
+                <p id="level"></p>
+                <p id="hp"></p>
+            </section>
+            <section id="buttons">
+                <button id="attacked">Attacked</button>
+                <button id="levelUp">Level Up</button>
+            </section>
     </div>
 </body>
 </html>

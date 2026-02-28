@@ -38,6 +38,8 @@ function blowUp(mouse) {
     if (mouse.target.tagName == 'IMG') {
         modalImg.src = mouse.target.src.replace('sm', 'full');
         modal.style.display = 'flex';
+        modal.style.flexDirection = 'column';
+        modal
         modal.showModal();
 
     }

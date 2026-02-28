@@ -18,10 +18,11 @@ const attacked = document.getElementById('attacked');
 const levelUp = document.getElementById('levelUp');
 const hit = document.getElementById('hit');
 const defeated = document.getElementById('defeated');
+const levelSound = document.getElementById('levelSFX');
+const what2Gen = document.getElementById('what2Gen');
 
 let levelInt = 1;
 let hpInt = 100;
-
 function imageGen() {
     const randomIndex = Math.floor(Math.random() * possibleImages.length);
     const chosenImg = possibleImages[randomIndex];
@@ -36,19 +37,15 @@ function imageGen() {
     cardLevel.textContent = `Level: ${levelInt}`;
     cardHp.textContent = `HP: ${hpInt}`;
 }
-
-imgGenButton.addEventListener('click', imageGen);
-
-imgGenInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        imageGen();
-    }
+what2Gen.addEventListener('submit', function(event) {
+    event.preventDefault();
+    imageGen();
 });
 
 attacked.addEventListener('click', function() {
     if (hpInt > 0) 
     {
-        hit.play();
+        hit.cloneNode().play();
         hpInt -= 10;
         cardHp.textContent = `HP: ${hpInt}`;
         cardDiv.classList.toggle('damaged');
@@ -58,10 +55,11 @@ attacked.addEventListener('click', function() {
     }
     if (hpInt <= 0)
     {
-        defeated.play();
         hpInt = 0;
         cardHp.textContent = `HP: ${hpInt}`;
         alert(`${cardName.textContent} has been defeated!`);
+        defeated.cloneNode().play();
+        document.body.classList.toggle('defeated');
         cardDiv.classList.toggle('defeated');
         setTimeout(() => {
             document.location.reload();
@@ -71,6 +69,7 @@ attacked.addEventListener('click', function() {
 });
 
 levelUp.addEventListener('click', function() {
+    levelSound.cloneNode().play();
     levelInt += 1;
     hpInt += 20;
     cardLevel.textContent = `Level: ${levelInt}`;

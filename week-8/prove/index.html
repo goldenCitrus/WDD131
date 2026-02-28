@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Card Battler">
+    <meta property="og:description" content="Generate a card to level up and attack!">
+    <meta property="og:url" content="https://goldencitrus.github.io/WDD131/week-8/prove/index.html">
+    <meta property="og:image" content="https://pbs.twimg.com/media/GLxVEkwbAAAUDuw?format=jpg&name=small">
+
+    <link rel="icon" href="/fav.ico">
+
+    <title>Card Battler</title>
 </head>
 <body>
-    <audio src="hit.mp3" id="hit"></audio>
-    <audio src="defeated.mp3" id="defeated"></audio>
+    <audio src="hit.wav" id="hit"></audio>
+    <audio src="defeated.wav" id="defeated"></audio>
+    <audio src="level.wav" id="levelSFX"></audio>
     <div id="imgGen">
-        <label for="prompt">Image Prompt:</label>
-        <input type="text" id="prompt" placeholder="Generate your card!">
-        <button id="generate">Generate Image</button>
+        <form id="what2Gen">
+            <label for="prompt">Image Prompt:</label>
+            <input type="text" id="prompt" required placeholder="Generate your card!">
+            <button type="submit" id="generate">Generate Image</button>
+        </form>
     </div>
     <div id="card">
         <img id="cardImg">

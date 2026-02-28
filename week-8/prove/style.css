@@ -7,20 +7,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial Black', sans-serif;
+    background-color: aliceblue;
+}
+body.defeated {
+    animation: fadeToBlack 1s;
+}
 
+@keyframes fadeToBlack {
+    to { background-color: black; }
 }
 
 #imgGen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 80px;
     background-color: #faf2d5;
     box-shadow: 1px 1px 6px black;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 #card img {
@@ -60,14 +69,14 @@ body {
 }
 
 #card.leveledUp {
-    animation: reverseShake 0.25s;
+    animation: reverseShake 0.3s;
 }
 
 @keyframes reverseShake {
     0% { transform: scale(1); }
-    20% { box-shadow: inset 0 0 50px rgb(255, 237, 118); }
-    25% { transform: scale(1.025); }
+    25% { transform: scale(1.05); }
     50% { transform: scale(1.05); }
+    50% { box-shadow: inset 0 0 50px rgb(255, 237, 118); }
     75% { transform: scale(1.025); }
     80% { transform: scale(1.01); }
     100% { transform: scale(1); }

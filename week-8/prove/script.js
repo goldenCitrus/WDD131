@@ -46,7 +46,7 @@ attacked.addEventListener('click', function() {
     if (hpInt > 0) 
     {
         hit.cloneNode().play();
-        hpInt -= 10;
+        hpInt -= 20;
         cardHp.textContent = `HP: ${hpInt}`;
         cardDiv.classList.toggle('damaged');
         setTimeout(() => {
@@ -71,7 +71,7 @@ attacked.addEventListener('click', function() {
 levelUp.addEventListener('click', function() {
     levelSound.cloneNode().play();
     levelInt += 1;
-    hpInt += 20;
+    hpInt += 40;
     cardLevel.textContent = `Level: ${levelInt}`;
     cardHp.textContent = `HP: ${hpInt}`;
     cardDiv.classList.toggle('leveledUp');

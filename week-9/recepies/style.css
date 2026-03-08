@@ -1,0 +1,166 @@
+body {
+    height: 100vh;
+}
+
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    color: rgb(112, 181, 238);
+    font-size: 70px;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    max-height: 20vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+header img {
+    height:150px;
+}
+
+#search {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#search img {
+    height: 40px;
+    padding-left: 10px;
+    border-left: 1px solid black;
+}
+
+#search p {
+    color: grey;
+    font-size: 30px;
+    margin: 5px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#bar {
+    background-color: lightgrey;
+    height: 2px;
+    margin: 20px 0px;
+}
+
+.recepie {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    /* width: 100vw; */
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.recepie img {
+    /* height: 100%; */
+    width: 100%;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.genre {
+    justify-self: flex-start;
+    background-color: rgb(238, 238, 238);
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px outset rgb(204, 204, 204);
+    width: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+.social img {
+    height: 30px;
+    width: auto;
+    padding: 5px;
+}
+
+.desc {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+
+    .right-side {
+        width: 50%;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        justify-self: flex-start;
+    }
+
+    .right-side h2 {
+        margin: 0px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0px;
+    }
+
+    footer {
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .recepie {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: flex-start;
+        /* width: 100vw; */
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 30px;
+        font-size: 30px;
+    }
+
+    .recepie img {
+        width: 50%;
+    }
+
+    .genre {
+        margin-top: 0px;
+    }
+
+    .desc {
+        display: flex;
+        font-size: 20px;
+    }
+
+}

@@ -80,23 +80,43 @@ const hikeDiv = document.getElementById("hike-container");
 daForm.addEventListener('submit', function(event) {
     event.preventDefault();
     let searchResults = hikes.filter((hike) => hike.name.toLowerCase().includes(`${searchInput.value.toLowerCase()}`))
+    console.log(searchResults);
     hikeDiv.innerHTML = "";
-    searchResults.forEach(hike => {
-      let difficultyEmoji = "";
-      for (let i = 0; i < hike.difficulty; i++) {
-        difficultyEmoji += "🥾"
-      }
-      hikeDiv.insertAdjacentHTML("beforeend", `<div class="hike-card">
-        <div class="hike-content">
-          <h2>${hike.name}</h2>
-          <div class="hike-tags">
-            <button>filler</button>
-            <button>filler</button>
+      if (searchResults.length == 0) {
+        hikeDiv.insertAdjacentHTML("beforeend", `<div class="hike-card">
+          <div class="hike-content">
+            <h2>No hikes found</h2>
+            <p>try searching something else i guess</p>
           </div>
-          <p>${hike.description}</p>
-          <p>${hike.directions}</p>
-          <p><span class="rating" role="img" aria-label="${hike.difficulty} out of 5">${difficultyEmoji}</span></p>
-        </div>
-      </div>`)
-    });
+        </div>`);
+      }
+      else {
+        searchResults.forEach(hike => {
+          let difficultyEmoji = "";
+          for (let i = 0; i < 5; i++) {
+            if (i < hike.difficulty) {
+              difficultyEmoji += "🥾"
+            }
+            else {
+              difficultyEmoji += "⬜";
+            }
+          }
+          let theTags = "";
+          hike.tags.forEach(tag => {
+              theTags += `<button>${tag}</button>`;
+          });
+          hikeDiv.insertAdjacentHTML("beforeend", `<div class="hike-card">
+            <div class="hike-content">
+              <h2>${hike.name}</h2>
+              <div class="hike-tags">
+                ${theTags}
+              </div>
+              <strong>${hike.description}</strong>
+              <p class=>Directions:</p>
+              <p>${hike.directions}</p>
+              <p><span class="rating" role="img" aria-label="${hike.difficulty} out of 5">${difficultyEmoji}</span></p>
+            </div>
+          </div>`);
+        });
+      }
 });

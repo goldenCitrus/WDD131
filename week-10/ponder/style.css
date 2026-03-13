@@ -1,0 +1,75 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    background: radial-gradient(ellipse, #f5f5dc, #6d6da0);
+}
+
+header, main, footer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 100%; */
+}
+
+header, footer {
+    height: 10%;
+    background-color: #6d6da0;
+}
+
+main {
+    padding: 20px 0px;
+    flex: 1;
+    background-color: #f5f5dc;
+    min-height: 80%;
+
+    /* justify-content: center; */
+}
+
+.hike-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #f5f5dc; */
+    width: 100%;
+    padding: 10px;
+}
+
+.hike-card p {
+    margin: 5px 0px;
+}
+
+.rating {
+    font-size: 17px;
+}
+
+button {
+    margin: 0px 10px 10px 0px;
+}
+
+.hike-card {
+    border-top: 1px dotted #bdbdaa;
+    width: 97%;
+    transition: all 0.5s ease;
+}
+
+h2 {
+    margin: 0px 0px 10px 0px;
+}
+
+#hike-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hike-card:hover {
+    background-color: #eeeed6;
+    /* border-top: none; */
+}

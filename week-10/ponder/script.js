@@ -82,7 +82,7 @@ daForm.addEventListener('submit', function(event) {
     let searchResults = hikes.filter((hike) => hike.name.toLowerCase().includes(`${searchInput.value.toLowerCase()}`))
     console.log(searchResults);
     hikeDiv.innerHTML = "";
-      if (searchResults.length == 0) {
+      if (searchResults.length == 0 || searchInput.value.toLowerCase() == "" || searchInput.value.toLowerCase() == " ") {
         hikeDiv.insertAdjacentHTML("beforeend", `<div class="hike-card">
           <div class="hike-content">
             <h2>No hikes found</h2>

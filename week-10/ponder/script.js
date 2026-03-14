@@ -12,7 +12,7 @@ const hikes = [
     description:
       "Beautiful short hike in Yellowstone along the Bechler river to Bechler Falls",
     directions:
-      "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road.Drive to the end of the Cave Falls road. There is a parking area at the trailhead.",
+      "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road. Drive to the end of the Cave Falls road. There is a parking area at the trailhead.",
     trailhead: [44.14457, -110.99781]
   },
   {
@@ -112,7 +112,7 @@ daForm.addEventListener('submit', function(event) {
                 ${theTags}
               </div>
               <strong>${hike.description}</strong>
-              <p class=>Directions:</p>
+              <p>Directions:</p>
               <p>${hike.directions}</p>
               <p><span class="rating" role="img" aria-label="${hike.difficulty} out of 5">${difficultyEmoji}</span></p>
             </div>
